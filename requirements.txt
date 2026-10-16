@@ -1,0 +1,5 @@
+trino==0.333.0
+pandas
+matplotlib
+boto3
+playwright

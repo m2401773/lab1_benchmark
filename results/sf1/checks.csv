@@ -1,0 +1,10 @@
+sf,format,codec,gold_rows,matches_reference
+sf1,PARQUET,NONE,18314,True
+sf1,PARQUET,SNAPPY,18314,True
+sf1,PARQUET,ZSTD,18314,True
+sf1,PARQUET,GZIP,18314,True
+sf1,ORC,NONE,18314,True
+sf1,ORC,SNAPPY,18314,True
+sf1,ORC,LZ4,18314,True
+sf1,ORC,ZSTD,18314,True
+sf1,ORC,GZIP,18314,True

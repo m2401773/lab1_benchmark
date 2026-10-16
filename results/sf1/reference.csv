@@ -1,0 +1,2 @@
+sf,rows,query_id,wall_s,elapsed_ms,cpu_ms,planning_ms,analysis_ms,physical_input_bytes,processed_rows,peak_memory_bytes
+sf1,18314,20261016_154830_00012_xf5cj,1.872,1823,7223,144,9,0,1032875,8841015

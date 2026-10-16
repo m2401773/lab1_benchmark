@@ -1,0 +1,332 @@
+######## sf1
+эталон q16 по tpch.sf1: 18314 строк, 1823 ms
+== PARQUET + NONE
+  bronze bronze_part               1.29 s
+  bronze bronze_partsupp           1.67 s
+  bronze bronze_supplier           0.43 s
+  silver silver_supplier           0.24 s
+  silver silver_part_supplier      2.01 s
+  gold   gold_supplier_cnt         0.35 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    343 ms  warm median    386.0 ms
+  q16_on_silver  first    290 ms  warm median    243.0 ms
+  gold_read      first     81 ms  warm median    117.0 ms
+  scan_agg       first     97 ms  warm median     88.0 ms
+  point_filter   first    188 ms  warm median    181.0 ms
+== PARQUET + SNAPPY
+  bronze bronze_part               1.08 s
+  bronze bronze_partsupp           2.35 s
+  bronze bronze_supplier           0.23 s
+  silver silver_supplier           0.17 s
+  silver silver_part_supplier      2.22 s
+  gold   gold_supplier_cnt         0.32 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    313 ms  warm median    298.0 ms
+  q16_on_silver  first    212 ms  warm median    187.0 ms
+  gold_read      first     78 ms  warm median     71.0 ms
+  scan_agg       first     65 ms  warm median     61.0 ms
+  point_filter   first     58 ms  warm median     56.0 ms
+== PARQUET + ZSTD
+  bronze bronze_part               0.69 s
+  bronze bronze_partsupp           1.31 s
+  bronze bronze_supplier           0.14 s
+  silver silver_supplier           0.19 s
+  silver silver_part_supplier      1.54 s
+  gold   gold_supplier_cnt         0.21 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    198 ms  warm median    255.0 ms
+  q16_on_silver  first    146 ms  warm median    159.0 ms
+  gold_read      first     67 ms  warm median     61.0 ms
+  scan_agg       first     58 ms  warm median     59.0 ms
+  point_filter   first     50 ms  warm median     41.0 ms
+== PARQUET + GZIP
+  bronze bronze_part               0.94 s
+  bronze bronze_partsupp           3.17 s
+  bronze bronze_supplier           0.20 s
+  silver silver_supplier           0.14 s
+  silver silver_part_supplier      2.27 s
+  gold   gold_supplier_cnt         0.25 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    216 ms  warm median    227.0 ms
+  q16_on_silver  first    175 ms  warm median    150.0 ms
+  gold_read      first     60 ms  warm median     59.0 ms
+  scan_agg       first     68 ms  warm median     72.0 ms
+  point_filter   first     62 ms  warm median     46.0 ms
+== ORC + NONE
+  bronze bronze_part               0.97 s
+  bronze bronze_partsupp           1.46 s
+  bronze bronze_supplier           0.14 s
+  silver silver_supplier           0.15 s
+  silver silver_part_supplier      1.56 s
+  gold   gold_supplier_cnt         0.23 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    468 ms  warm median    345.0 ms
+  q16_on_silver  first    221 ms  warm median    202.0 ms
+  gold_read      first    109 ms  warm median     83.0 ms
+  scan_agg       first    141 ms  warm median    100.0 ms
+  point_filter   first     58 ms  warm median     46.0 ms
+== ORC + SNAPPY
+  bronze bronze_part               0.86 s
+  bronze bronze_partsupp           1.45 s
+  bronze bronze_supplier           0.19 s
+  silver silver_supplier           0.16 s
+  silver silver_part_supplier      1.93 s
+  gold   gold_supplier_cnt         0.25 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    244 ms  warm median    202.0 ms
+  q16_on_silver  first    151 ms  warm median    153.0 ms
+  gold_read      first     83 ms  warm median     56.0 ms
+  scan_agg       first     63 ms  warm median     62.0 ms
+  point_filter   first     69 ms  warm median     37.0 ms
+== ORC + LZ4
+  bronze bronze_part               0.58 s
+  bronze bronze_partsupp           1.28 s
+  bronze bronze_supplier           0.16 s
+  silver silver_supplier           0.13 s
+  silver silver_part_supplier      1.47 s
+  gold   gold_supplier_cnt         0.20 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    261 ms  warm median    208.0 ms
+  q16_on_silver  first    170 ms  warm median    162.0 ms
+  gold_read      first     73 ms  warm median     69.0 ms
+  scan_agg       first     55 ms  warm median     58.0 ms
+  point_filter   first     80 ms  warm median     39.0 ms
+== ORC + ZSTD
+  bronze bronze_part               0.72 s
+  bronze bronze_partsupp           1.34 s
+  bronze bronze_supplier           0.18 s
+  silver silver_supplier           0.14 s
+  silver silver_part_supplier      1.76 s
+  gold   gold_supplier_cnt         0.22 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    245 ms  warm median    204.0 ms
+  q16_on_silver  first    147 ms  warm median    171.0 ms
+  gold_read      first     63 ms  warm median     61.0 ms
+  scan_agg       first     61 ms  warm median     95.0 ms
+  point_filter   first    157 ms  warm median    103.0 ms
+== ORC + GZIP
+  bronze bronze_part               1.32 s
+  bronze bronze_partsupp           2.47 s
+  bronze bronze_supplier           0.17 s
+  silver silver_supplier           0.13 s
+  silver silver_part_supplier      2.33 s
+  gold   gold_supplier_cnt         0.24 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first    239 ms  warm median    231.0 ms
+  q16_on_silver  first    220 ms  warm median    160.0 ms
+  gold_read      first     58 ms  warm median     70.0 ms
+  scan_agg       first     85 ms  warm median     76.0 ms
+  point_filter   first     47 ms  warm median     40.0 ms
+результаты в /Users/idwby/lab4-lakehouse-q16/results/sf1
+  insert 0/100
+  insert 20/100
+  insert 40/100
+  insert 60/100
+  insert 80/100
+  compact         files=   1 manifests=   1 snapshots=   1 meta=   211.8 KiB
+  fragmented      files= 100 manifests=   1 snapshots= 101 meta= 52864.5 KiB
+  after_optimize  files= 101 manifests=   2 snapshots= 102 meta= 53711.4 KiB
+  after_expire    files=   1 manifests=   2 snapshots=   1 meta= 24273.4 KiB
+  after_manifests files=   1 manifests=   1 snapshots=   2 meta= 24310.3 KiB
+  insert 0/100
+  insert 20/100
+  insert 40/100
+  insert 60/100
+  insert 80/100
+  compact         files=   1 manifests=   1 snapshots=   1 meta=   211.7 KiB
+  fragmented      files= 100 manifests=   1 snapshots= 101 meta= 52736.0 KiB
+  after_optimize  files= 101 manifests=   2 snapshots= 102 meta= 53577.0 KiB
+  after_expire    files=   1 manifests=   2 snapshots=   1 meta= 24182.2 KiB
+  after_manifests files=   1 manifests=   1 snapshots=   2 meta= 24218.6 KiB
+  PARQUET ZSTD iceberg         cold sum 622 ms, cache 0 MiB
+  PARQUET ZSTD iceberg_cached  cold sum 746 ms, cache 18 MiB
+  ORC ZSTD iceberg         cold sum 695 ms, cache 0 MiB
+  ORC ZSTD iceberg_cached  cold sum 858 ms, cache 21 MiB
+  PARQUET NONE iceberg         cold sum 782 ms, cache 0 MiB
+  PARQUET NONE iceberg_cached  cold sum 757 ms, cache 29 MiB
+                                            cold_ms  warm_ms
+format  codec catalog        query                          
+ORC     ZSTD  iceberg        q16_on_bronze      395      321
+                             q16_on_silver      226      169
+                             scan_agg            74       74
+              iceberg_cached q16_on_bronze      574      350
+                             q16_on_silver      203      196
+                             scan_agg            81       72
+PARQUET NONE  iceberg        q16_on_bronze      452      419
+                             q16_on_silver      254      232
+                             scan_agg            76       77
+              iceberg_cached q16_on_bronze      408      360
+                             q16_on_silver      268      181
+                             scan_agg            81       58
+        ZSTD  iceberg        q16_on_bronze      351      335
+                             q16_on_silver      192      194
+                             scan_agg            79       71
+              iceberg_cached q16_on_bronze      448      346
+                             q16_on_silver      227      196
+                             scan_agg            71       59
+######## sf10
+эталон q16 по tpch.sf10: 27840 строк, 5453 ms
+== PARQUET + NONE
+  bronze bronze_part               3.89 s
+  bronze bronze_partsupp          29.78 s
+  bronze bronze_supplier           2.85 s
+  silver silver_supplier           0.72 s
+  silver silver_part_supplier     17.55 s
+  gold   gold_supplier_cnt         1.22 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1754 ms  warm median   1515.0 ms
+  q16_on_silver  first    999 ms  warm median    769.0 ms
+  gold_read      first    344 ms  warm median    316.0 ms
+  scan_agg       first    628 ms  warm median    293.0 ms
+  point_filter   first    356 ms  warm median    266.0 ms
+== PARQUET + SNAPPY
+  bronze bronze_part               5.85 s
+  bronze bronze_partsupp          15.11 s
+  bronze bronze_supplier           0.70 s
+  silver silver_supplier           0.40 s
+  silver silver_part_supplier     17.66 s
+  gold   gold_supplier_cnt         1.52 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1602 ms  warm median   1432.0 ms
+  q16_on_silver  first    953 ms  warm median    865.0 ms
+  gold_read      first    139 ms  warm median     96.0 ms
+  scan_agg       first    277 ms  warm median    337.0 ms
+  point_filter   first    351 ms  warm median    435.0 ms
+== PARQUET + ZSTD
+  bronze bronze_part               5.50 s
+  bronze bronze_partsupp          16.95 s
+  bronze bronze_supplier           0.81 s
+  silver silver_supplier           0.28 s
+  silver silver_part_supplier     18.09 s
+  gold   gold_supplier_cnt         1.03 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1238 ms  warm median   1154.0 ms
+  q16_on_silver  first    858 ms  warm median    709.0 ms
+  gold_read      first    102 ms  warm median    140.0 ms
+  scan_agg       first    413 ms  warm median    280.0 ms
+  point_filter   first    144 ms  warm median    144.0 ms
+== PARQUET + GZIP
+  bronze bronze_part               7.83 s
+  bronze bronze_partsupp          18.23 s
+  bronze bronze_supplier           0.91 s
+  silver silver_supplier           0.31 s
+  silver silver_part_supplier     16.05 s
+  gold   gold_supplier_cnt         0.62 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1369 ms  warm median   1083.0 ms
+  q16_on_silver  first    663 ms  warm median    683.0 ms
+  gold_read      first     99 ms  warm median     79.0 ms
+  scan_agg       first    259 ms  warm median    229.0 ms
+  point_filter   first    134 ms  warm median    147.0 ms
+== ORC + NONE
+  bronze bronze_part               6.46 s
+  bronze bronze_partsupp          29.00 s
+  bronze bronze_supplier           1.50 s
+  silver silver_supplier           0.45 s
+  silver silver_part_supplier     14.92 s
+  gold   gold_supplier_cnt         0.88 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   2393 ms  warm median   1859.0 ms
+  q16_on_silver  first    844 ms  warm median    932.0 ms
+  gold_read      first    196 ms  warm median    115.0 ms
+  scan_agg       first    261 ms  warm median    400.0 ms
+  point_filter   first    311 ms  warm median    224.0 ms
+== ORC + SNAPPY
+  bronze bronze_part               5.85 s
+  bronze bronze_partsupp          18.85 s
+  bronze bronze_supplier           0.84 s
+  silver silver_supplier           0.35 s
+  silver silver_part_supplier     15.52 s
+  gold   gold_supplier_cnt         1.04 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1278 ms  warm median   1249.0 ms
+  q16_on_silver  first    796 ms  warm median    960.0 ms
+  gold_read      first    121 ms  warm median     92.0 ms
+  scan_agg       first    208 ms  warm median    261.0 ms
+  point_filter   first    140 ms  warm median    173.0 ms
+== ORC + LZ4
+  bronze bronze_part               4.88 s
+  bronze bronze_partsupp          19.68 s
+  bronze bronze_supplier           0.99 s
+  silver silver_supplier           0.37 s
+  silver silver_part_supplier     15.05 s
+  gold   gold_supplier_cnt         1.30 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1491 ms  warm median   1321.0 ms
+  q16_on_silver  first    705 ms  warm median    764.0 ms
+  gold_read      first     93 ms  warm median     82.0 ms
+  scan_agg       first    178 ms  warm median    168.0 ms
+  point_filter   first    260 ms  warm median    142.0 ms
+== ORC + ZSTD
+  bronze bronze_part               4.37 s
+  bronze bronze_partsupp          17.39 s
+  bronze bronze_supplier           1.02 s
+  silver silver_supplier           0.54 s
+  silver silver_part_supplier     20.48 s
+  gold   gold_supplier_cnt         1.23 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1526 ms  warm median   1659.0 ms
+  q16_on_silver  first    772 ms  warm median    794.0 ms
+  gold_read      first    125 ms  warm median    100.0 ms
+  scan_agg       first    221 ms  warm median    267.0 ms
+  point_filter   first    158 ms  warm median    109.0 ms
+== ORC + GZIP
+  bronze bronze_part               8.12 s
+  bronze bronze_partsupp          23.48 s
+  bronze bronze_supplier           1.60 s
+  silver silver_supplier           0.44 s
+  silver silver_part_supplier     20.72 s
+  gold   gold_supplier_cnt         1.53 s
+  gold совпадает с эталоном: True
+  q16_on_bronze  first   1375 ms  warm median   1279.0 ms
+  q16_on_silver  first    718 ms  warm median    871.0 ms
+  gold_read      first    274 ms  warm median    126.0 ms
+  scan_agg       first    375 ms  warm median    390.0 ms
+  point_filter   first    239 ms  warm median    247.0 ms
+результаты в /Users/idwby/lab4-lakehouse-q16/results/sf10
+  insert 0/100
+  insert 20/100
+  insert 40/100
+  insert 60/100
+  insert 80/100
+  compact         files=   9 manifests=   1 snapshots=   1 meta=   210.7 KiB
+  fragmented      files= 100 manifests=   1 snapshots= 101 meta= 52915.7 KiB
+  after_optimize  files= 101 manifests=   2 snapshots= 102 meta= 53764.2 KiB
+  after_expire    files=   1 manifests=   2 snapshots=   1 meta= 24355.5 KiB
+  after_manifests files=   1 manifests=   1 snapshots=   2 meta= 24392.6 KiB
+  insert 0/100
+  insert 20/100
+  insert 40/100
+  insert 60/100
+  insert 80/100
+  compact         files=   9 manifests=   1 snapshots=   1 meta=   210.5 KiB
+  fragmented      files= 100 manifests=   1 snapshots= 101 meta= 52786.5 KiB
+  after_optimize  files= 101 manifests=   2 snapshots= 102 meta= 53628.2 KiB
+  after_expire    files=   1 manifests=   2 snapshots=   1 meta= 24263.0 KiB
+  after_manifests files=   1 manifests=   1 snapshots=   2 meta= 24299.6 KiB
+  PARQUET ZSTD iceberg         cold sum 2602 ms, cache 0 MiB
+  PARQUET ZSTD iceberg_cached  cold sum 3684 ms, cache 154 MiB
+  ORC ZSTD iceberg         cold sum 2806 ms, cache 0 MiB
+  ORC ZSTD iceberg_cached  cold sum 2667 ms, cache 179 MiB
+  PARQUET NONE iceberg         cold sum 3262 ms, cache 0 MiB
+  PARQUET NONE iceberg_cached  cold sum 3743 ms, cache 293 MiB
+                                            cold_ms  warm_ms
+format  codec catalog        query                          
+ORC     ZSTD  iceberg        q16_on_bronze     1581     1219
+                             q16_on_silver      762      721
+                             scan_agg           463      301
+              iceberg_cached q16_on_bronze     1483     1033
+                             q16_on_silver      910      682
+                             scan_agg           274      201
+PARQUET NONE  iceberg        q16_on_bronze     2077     1394
+                             q16_on_silver      780      743
+                             scan_agg           405      260
+              iceberg_cached q16_on_bronze     1910     1220
+                             q16_on_silver     1112      676
+                             scan_agg           721      294
+        ZSTD  iceberg        q16_on_bronze     1596     1516
+                             q16_on_silver      711      960
+                             scan_agg           295      249
+              iceberg_cached q16_on_bronze     1955     1245
+                             q16_on_silver     1112      776
+                             scan_agg           617      309
